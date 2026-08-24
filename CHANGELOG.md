@@ -1,5 +1,11 @@
 # Değişiklik Geçmişi
 
+## 1.0.4
+
+- Super admin hesapları için Warext UCM izinleri otomatik etkinleştirildi.
+- Kurucu hesabının özel eklenti izni verilmediğinde yönetim sayfasından engellenmesi düzeltildi.
+- Super admin bypass yalnızca `warextUcm` izin grubuyla sınırlandırıldı.
+
 ## 1.0.3
 
 - Kullanıcı profili Moderator tools menüsüne İçerikleri Yönet bağlantısı eklendi.

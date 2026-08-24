@@ -4,11 +4,11 @@ XenForo 2.3 için kullanıcıların oluşturduğu içerikleri kategori ve içeri
 
 ## Sürüm
 
-`1.0.3`
+`1.0.4`
 
 ## Doğrudan XenForo Kurulumu
 
-**Kurulum ZIP'i:** [WarextStudios-UserContentManager-1.0.3.zip](releases/WarextStudios-UserContentManager-1.0.3.zip?raw=1)
+**Kurulum ZIP'i:** [WarextStudios-UserContentManager-1.0.4.zip](releases/WarextStudios-UserContentManager-1.0.4.zip?raw=1)
 
 ZIP doğrudan XenForo Admin CP > Add-ons > Install/upgrade from archive alanına yüklenir.
 
@@ -18,7 +18,7 @@ ZIP doğrudan XenForo Admin CP > Add-ons > Install/upgrade from archive alanına
 - Admin CP > Users > Kullanıcı İçerik Yöneticisi
 - Admin CP > Users > kullanıcıyı düzenle > Actions > İçerikleri Yönet
 
-Kullanım bağlantılarının görünmesi için ilgili moderatör grubunda `warextUcm` görüntüleme ve gerekli toplu işlem izinleri açık olmalıdır.
+Super admin hesapları Warext UCM izinlerine otomatik olarak sahiptir. Diğer moderatör ve yöneticiler için ilgili `warextUcm` izinleri ayrıca tanımlanmalıdır.
 
 ## Gereksinimler
 

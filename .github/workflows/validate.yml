@@ -42,6 +42,8 @@ jobs:
         run: |
           test -f upload/src/addons/WarextStudios/UserContentManager/addon.json
           test -f upload/src/addons/WarextStudios/UserContentManager/Setup.php
+          test -f upload/src/addons/WarextStudios/UserContentManager/XF/Entity/User.php
+          test -f upload/src/addons/WarextStudios/UserContentManager/_data/class_extensions.xml
           test -f upload/src/addons/WarextStudios/UserContentManager/Admin/Controller/UserContentAdmin.php
           test -f upload/src/addons/WarextStudios/UserContentManager/Job/BulkOperationFinal2.php
           test -f upload/src/addons/WarextStudios/UserContentManager/Pub/Controller/UserContentFinal.php
