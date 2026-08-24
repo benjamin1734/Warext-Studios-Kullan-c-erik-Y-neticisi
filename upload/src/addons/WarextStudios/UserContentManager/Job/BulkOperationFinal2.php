@@ -9,7 +9,7 @@ class BulkOperationFinal2 extends BulkOperationFinal
 {
     public function run($maxRunTime)
     {
-        $operation = $this->app->em()->find('WarextStudios/UserContentManager:BulkOperation', $this->data['operation_id']);
+        $operation = $this->app->em()->find('WarextStudios\\UserContentManager:BulkOperation', $this->data['operation_id']);
 
         if (!$operation || in_array($operation->status, ['completed', 'failed', 'cancelled'], true))
         {
@@ -43,7 +43,7 @@ class BulkOperationFinal2 extends BulkOperationFinal
             }
 
             \XF::setVisitor($actor);
-            $handler = $this->app->repository('WarextStudios/UserContentManager:Content')->getHandler($operation->content_type);
+            $handler = $this->app->repository('WarextStudios\\UserContentManager:Content')->getHandler($operation->content_type);
 
             if (!$handler)
             {

@@ -16,7 +16,7 @@ class BulkOperationQueue
         int $matchedCount
     ): BulkOperation
     {
-        $operation = \XF::em()->create('WarextStudios/UserContentManager:BulkOperation');
+        $operation = \XF::em()->create('WarextStudios\\UserContentManager:BulkOperation');
         $operation->operation_key = \XF::generateRandomString(32);
         $operation->actor_user_id = $actorUserId;
         $operation->target_user_id = $targetUserId;
@@ -32,7 +32,7 @@ class BulkOperationQueue
 
         \XF::app()->jobManager()->enqueueUnique(
             'warextUcmBulk' . $operation->operation_id,
-            'WarextStudios/UserContentManager:BulkOperationFinal2',
+            'WarextStudios\\UserContentManager:BulkOperationFinal2',
             ['operation_id' => $operation->operation_id],
             false
         );

@@ -27,7 +27,7 @@ class ActionLogger
 
     protected function write(string $contentType, int $contentId, int $targetUserId, string $action, string $reason, array $metadata): void
     {
-        $log = \XF::em()->create('WarextStudios/UserContentManager:ActionLog');
+        $log = \XF::em()->create('WarextStudios\\UserContentManager:ActionLog');
         $log->actor_user_id = \XF::visitor()->user_id;
         $log->target_user_id = $targetUserId;
         $log->content_type = $contentType;

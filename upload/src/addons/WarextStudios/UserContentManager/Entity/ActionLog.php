@@ -10,7 +10,7 @@ class ActionLog extends Entity
     public static function getStructure(Structure $structure): Structure
     {
         $structure->table = 'xf_warext_ucm_action_log';
-        $structure->shortName = 'WarextStudios/UserContentManager:ActionLog';
+        $structure->shortName = 'WarextStudios\\UserContentManager:ActionLog';
         $structure->primaryKey = 'action_log_id';
         $structure->columns = [
             'action_log_id' => ['type' => self::UINT, 'autoIncrement' => true],

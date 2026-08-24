@@ -1,5 +1,13 @@
 # Değişiklik Geçmişi
 
+## 1.0.5
+
+- XenForo kısa sınıf adlarında namespace ayırıcıları düzeltildi.
+- Kullanıcı içerik yönetim sayfasındaki Content repository çözümleme hatası giderildi.
+- ActionLog ve BulkOperation entity kısa adları düzeltildi.
+- Büyük toplu işlemlerde Job ve repository çözümleme hataları giderildi.
+- Public konu ve Resource Manager controller'larına uyumluluk katmanı eklendi.
+
 ## 1.0.4
 
 - Super admin hesapları için Warext UCM izinleri otomatik etkinleştirildi.

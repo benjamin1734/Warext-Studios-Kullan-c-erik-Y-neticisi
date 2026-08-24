@@ -10,7 +10,7 @@ class BulkOperation extends Entity
     public static function getStructure(Structure $structure): Structure
     {
         $structure->table = 'xf_warext_ucm_bulk_operation';
-        $structure->shortName = 'WarextStudios/UserContentManager:BulkOperation';
+        $structure->shortName = 'WarextStudios\\UserContentManager:BulkOperation';
         $structure->primaryKey = 'operation_id';
         $structure->columns = [
             'operation_id' => ['type' => self::UINT, 'autoIncrement' => true],

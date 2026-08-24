@@ -38,6 +38,27 @@ jobs:
           for path in sorted((root / '_data').glob('*.xml')):
               ET.parse(path)
           PY
+      - name: Runtime short names
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          root = Path('upload/src/addons/WarextStudios/UserContentManager')
+          files = [
+              root / 'Pub/Controller/ActionHistory.php',
+              root / 'Service/ActionLogger.php',
+              root / 'Service/BulkOperationQueue.php',
+              root / 'Entity/ActionLog.php',
+              root / 'Entity/BulkOperation.php',
+              root / 'Job/BulkOperationFinal2.php'
+          ]
+          bad = 'WarextStudios/UserContentManager:'
+          for path in files:
+              if bad in path.read_text(encoding='utf-8'):
+                  raise SystemExit(f'Invalid XenForo short name in {path}')
+          routes = (root / '_data/routes.xml').read_text(encoding='utf-8')
+          if 'UserContentFinalCompat' not in routes or 'ResourceContentFinalCompat' not in routes:
+              raise SystemExit('Compatibility controllers are not active in routes.xml')
+          PY
       - name: Required files
         run: |
           test -f upload/src/addons/WarextStudios/UserContentManager/addon.json
@@ -48,6 +69,8 @@ jobs:
           test -f upload/src/addons/WarextStudios/UserContentManager/Job/BulkOperationFinal2.php
           test -f upload/src/addons/WarextStudios/UserContentManager/Pub/Controller/UserContentFinal.php
           test -f upload/src/addons/WarextStudios/UserContentManager/Pub/Controller/ResourceContentFinal.php
+          test -f upload/src/addons/WarextStudios/UserContentManager/Pub/Controller/UserContentFinalCompat.php
+          test -f upload/src/addons/WarextStudios/UserContentManager/Pub/Controller/ResourceContentFinalCompat.php
           test -f upload/src/addons/WarextStudios/UserContentManager/_data/admin_navigation.xml
       - name: Build XenForo install archive
         if: matrix.php == '8.4'
