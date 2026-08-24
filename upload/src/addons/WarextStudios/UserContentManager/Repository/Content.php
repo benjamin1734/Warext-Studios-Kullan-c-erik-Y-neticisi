@@ -13,6 +13,11 @@ class Content extends Repository
     {
         $handlerClass = \XF::app()->getContentTypeFieldValue($contentType, self::HANDLER_FIELD);
 
+        if (!$handlerClass && $contentType === 'resource' && class_exists('XFRM\\Entity\\ResourceItem'))
+        {
+            $handlerClass = 'WarextStudios\\UserContentManager\\Content\\Resource';
+        }
+
         if (!$handlerClass || !class_exists($handlerClass))
         {
             return null;
@@ -42,6 +47,16 @@ class Content extends Repository
             if ($handler)
             {
                 $handlers[$contentType] = $handler;
+            }
+        }
+
+        if (!isset($handlers['resource']))
+        {
+            $resourceHandler = $this->getHandler('resource');
+
+            if ($resourceHandler)
+            {
+                $handlers['resource'] = $resourceHandler;
             }
         }
 

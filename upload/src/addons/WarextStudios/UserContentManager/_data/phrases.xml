@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <phrases>
-  <phrase title="permission.warextUcm_view" version_id="1000030" version_string="0.3.0">Kullanıcı içerik yönetim sayfasını görüntüleyebilir</phrase>
-  <phrase title="permission.warextUcm_bulk" version_id="1000070" version_string="0.7.0">Toplu içerik işlemleri yapabilir</phrase>
-  <phrase title="permission.warextUcm_hardDelete" version_id="1000070" version_string="0.7.0">İçerikleri kalıcı olarak silebilir</phrase>
+  <phrase title="permission_group_warextUcm" version_id="1001010" version_string="1.0.1">Warext Studios | Kullanıcı İçerik Yöneticisi</phrase>
+  <phrase title="permission_warextUcm_view" version_id="1001010" version_string="1.0.1">Kullanıcı içerik yönetim sayfasını görüntüleyebilir</phrase>
+  <phrase title="permission_warextUcm_bulk" version_id="1001010" version_string="1.0.1">Toplu içerik işlemleri yapabilir</phrase>
+  <phrase title="permission_warextUcm_hardDelete" version_id="1001010" version_string="1.0.1">İçerikleri kalıcı olarak silebilir</phrase>
   <phrase title="warext_ucm_manage_content" version_id="1000030" version_string="0.3.0">İçerikleri Yönet</phrase>
   <phrase title="warext_ucm_page_title_x" version_id="1000030" version_string="0.3.0">{username} | İçerik Yönetimi</phrase>
   <phrase title="warext_ucm_summary" version_id="1000030" version_string="0.3.0">İçerik Özeti</phrase>
