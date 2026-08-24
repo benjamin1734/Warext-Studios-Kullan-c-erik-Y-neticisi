@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <template_modifications>
-  <modification type="public" template="member_view" modification_key="wrxt_ucm_member_manage_content" description="Kullanıcı profiline içerik yönetim bağlantısını ekler" execution_order="10" enabled="1" action="str_replace">
-    <find>&lt;!--[XF:action_top_end]--&gt;</find>
+  <modification type="public" template="member_macros" modification_key="wrxt_ucm_member_moderator_menu" description="Kullanıcı içerik yönetimini moderatör araçlarına ekler" execution_order="10" enabled="1" action="str_replace">
+    <find><![CDATA[<!--[XF:moderator_menu:bottom]-->]]></find>
     <replace><![CDATA[<xf:if is="$xf.visitor.hasPermission('warextUcm', 'view')">
-<xf:button href="{{ link('kullanici-icerikleri', $user) }}" class="button--link">
-    {{ phrase('warext_ucm_manage_content') }}
-</xf:button>
+<a href="{{ link('kullanici-icerikleri', $user) }}" class="menu-linkRow">{{ phrase('warext_ucm_manage_content') }}</a>
 </xf:if>
+$0]]></replace>
+  </modification>
+  <modification type="admin" template="user_edit" modification_key="wrxt_ucm_admin_user_actions" description="Kullanıcı içerik yönetimini yönetici kullanıcı işlemlerine ekler" execution_order="10" enabled="1" action="str_replace">
+    <find><![CDATA[<!--[XF:actions_menu:bottom]-->]]></find>
+    <replace><![CDATA[<a href="{{ link('warext-ucm/manage', $user) }}" class="menu-linkRow">{{ phrase('warext_ucm_manage_content') }}</a>
 $0]]></replace>
   </modification>
   <modification type="public" template="wrxt_ucm_user_content" modification_key="wrxt_ucm_xfrm_tab_visibility" description="Kaynaklar sekmesini yalnızca Resource Manager etkinken gösterir" execution_order="20" enabled="1" action="str_replace">

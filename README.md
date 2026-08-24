@@ -4,19 +4,21 @@ XenForo 2.3 için kullanıcıların oluşturduğu içerikleri kategori ve içeri
 
 ## Sürüm
 
-`1.0.2`
+`1.0.3`
 
 ## Doğrudan XenForo Kurulumu
 
-**Kurulum ZIP'i:** [WarextStudios-UserContentManager-1.0.2.zip](releases/WarextStudios-UserContentManager-1.0.2.zip?raw=1)
+**Kurulum ZIP'i:** [WarextStudios-UserContentManager-1.0.3.zip](releases/WarextStudios-UserContentManager-1.0.3.zip?raw=1)
 
-Bu ZIP doğrudan XenForo Admin CP > Add-ons > Install/upgrade from archive alanına yüklenmek için hazırlanmıştır.
+ZIP doğrudan XenForo Admin CP > Add-ons > Install/upgrade from archive alanına yüklenir.
 
-Arşiv yükleyicisini kullanmak için `src/config.php` içinde aşağıdaki ayarın açık olması gerekir:
+## Kullanım
 
-```php
-$config['enableAddOnArchiveInstaller'] = true;
-```
+- Forum kullanıcı profili > Moderator tools > İçerikleri Yönet
+- Admin CP > Users > Kullanıcı İçerik Yöneticisi
+- Admin CP > Users > kullanıcıyı düzenle > Actions > İçerikleri Yönet
+
+Kullanım bağlantılarının görünmesi için ilgili moderatör grubunda `warextUcm` görüntüleme ve gerekli toplu işlem izinleri açık olmalıdır.
 
 ## Gereksinimler
 
@@ -27,7 +29,7 @@ $config['enableAddOnArchiveInstaller'] = true;
 
 ## Özellikler
 
-- Kullanıcı profili üzerinden içerik yönetim merkezi
+- Kullanıcı içerik yönetim merkezi
 - XenForo default arayüz bileşenleri
 - Konu kategori gruplaması ve gelişmiş filtreleme
 - Tekli, sayfa, kategori ve tüm filtre sonucu seçimi
@@ -37,17 +39,11 @@ $config['enableAddOnArchiveInstaller'] = true;
 - İçerik bazında XenForo native permission yeniden doğrulaması
 - İşlem geçmişi ve XenForo moderator log entegrasyonu
 - Birden fazla konuya dayalı tek kullanıcı uyarısı
-- XenForo Resource Manager otomatik ve opsiyonel entegrasyonu
-- XFRM kaynak taşıma, silme, geri getirme, onay ve düzenleme
-- `warext_ucm_handler_class` tabanlı üçüncü taraf içerik adaptör API
-- 500 içeriğe kadar anlık toplu işlem
+- XenForo Resource Manager opsiyonel entegrasyonu
 - 500 üzeri işlemlerde XenForo Job sistemi
 - Cursor tabanlı batch işleme
 - Operation bazlı concurrency kilidi ve idempotent ilerleme
-- Job çalışırken işlemi başlatan moderatörün güncel izinlerini tekrar doğrulama
 
 ## Eklenti kimliği
 
 `WarextStudios/UserContentManager`
-
-Resource Manager kurulu değilse kaynak yönetimi otomatik olarak devre dışı kalır ve eklenti konu yönetimiyle çalışmaya devam eder.

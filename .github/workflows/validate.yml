@@ -42,12 +42,11 @@ jobs:
         run: |
           test -f upload/src/addons/WarextStudios/UserContentManager/addon.json
           test -f upload/src/addons/WarextStudios/UserContentManager/Setup.php
-          test -f upload/src/addons/WarextStudios/UserContentManager/_data/content_type_fields.xml
-          test -f upload/src/addons/WarextStudios/UserContentManager/_data/permissions.xml
-          test ! -f upload/src/addons/WarextStudios/UserContentManager/_data/permission_groups.xml
+          test -f upload/src/addons/WarextStudios/UserContentManager/Admin/Controller/UserContentAdmin.php
           test -f upload/src/addons/WarextStudios/UserContentManager/Job/BulkOperationFinal2.php
           test -f upload/src/addons/WarextStudios/UserContentManager/Pub/Controller/UserContentFinal.php
           test -f upload/src/addons/WarextStudios/UserContentManager/Pub/Controller/ResourceContentFinal.php
+          test -f upload/src/addons/WarextStudios/UserContentManager/_data/admin_navigation.xml
       - name: Build XenForo install archive
         if: matrix.php == '8.4'
         run: |
