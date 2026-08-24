@@ -4,11 +4,11 @@ XenForo 2.3 için kullanıcıların oluşturduğu içerikleri kategori ve içeri
 
 ## Sürüm
 
-`1.0.1`
+`1.0.2`
 
 ## Doğrudan XenForo Kurulumu
 
-**Kurulum ZIP'i:** [WarextStudios-UserContentManager-1.0.1.zip](releases/WarextStudios-UserContentManager-1.0.1.zip?raw=1)
+**Kurulum ZIP'i:** [WarextStudios-UserContentManager-1.0.2.zip](releases/WarextStudios-UserContentManager-1.0.2.zip?raw=1)
 
 Bu ZIP doğrudan XenForo Admin CP > Add-ons > Install/upgrade from archive alanına yüklenmek için hazırlanmıştır.
 
