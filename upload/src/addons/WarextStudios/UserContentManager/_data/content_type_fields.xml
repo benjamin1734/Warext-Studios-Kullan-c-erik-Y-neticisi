@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<content_type_fields>
+  <field content_type="thread" field_name="warext_ucm_handler_class" field_value="WarextStudios\UserContentManager\Content\Thread"/>
+  <field content_type="resource" field_name="warext_ucm_handler_class" field_value="WarextStudios\UserContentManager\Content\Resource"/>
+</content_type_fields>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<template_modifications>
+  <modification type="public" template="member_view" modification_key="wrxt_ucm_member_manage_content" description="Kullanıcı profiline içerik yönetim bağlantısını ekler" execution_order="10" enabled="1" action="str_replace">
+    <find>&lt;!--[XF:action_top_end]--&gt;</find>
+    <replace><![CDATA[<xf:if is="$xf.visitor.hasPermission('warextUcm', 'view')">
+<xf:button href="{{ link('kullanici-icerikleri', $user) }}" class="button--link">
+    {{ phrase('warext_ucm_manage_content') }}
+</xf:button>
+</xf:if>
+$0]]></replace>
+  </modification>
+  <modification type="public" template="wrxt_ucm_user_content" modification_key="wrxt_ucm_xfrm_tab_visibility" description="Kaynaklar sekmesini yalnızca Resource Manager etkinken gösterir" execution_order="20" enabled="1" action="str_replace">
+    <find>&lt;a class=&quot;button&quot; href=&quot;{{ link('kullanici-kaynaklari', $user) }}&quot;&gt;Kaynaklar&lt;/a&gt;</find>
+    <replace><![CDATA[<xf:if is="is_addon_active('XFRM')">
+<a class="button" href="{{ link('kullanici-kaynaklari', $user) }}">Kaynaklar</a>
+</xf:if>]]></replace>
+  </modification>
+</template_modifications>

@@ -1,0 +1,118 @@
+name: XenForo Add-on Validation
+
+on:
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - 'releases/**'
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        php: ['8.1', '8.4']
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php }}
+          coverage: none
+
+      - name: PHP syntax
+        run: find upload/src/addons/WarextStudios/UserContentManager -type f -name '*.php' -print0 | xargs -0 -n1 php -l
+
+      - name: JSON and XML
+        run: |
+          python3 - <<'PY'
+          import json
+          import pathlib
+          import xml.etree.ElementTree as ET
+
+          root = pathlib.Path('upload/src/addons/WarextStudios/UserContentManager')
+          for path in sorted(root.rglob('*.json')):
+              with path.open(encoding='utf-8') as handle:
+                  json.load(handle)
+          for path in sorted((root / '_data').glob('*.xml')):
+              ET.parse(path)
+          PY
+
+      - name: Required files
+        run: |
+          test -f upload/src/addons/WarextStudios/UserContentManager/addon.json
+          test -f upload/src/addons/WarextStudios/UserContentManager/Setup.php
+          test -f upload/src/addons/WarextStudios/UserContentManager/Job/BulkOperationFinal2.php
+          test -f upload/src/addons/WarextStudios/UserContentManager/Pub/Controller/UserContentFinal.php
+          test -f upload/src/addons/WarextStudios/UserContentManager/Pub/Controller/ResourceContentFinal.php
+          test -f upload/src/addons/WarextStudios/UserContentManager/Content/Thread.php
+
+      - name: Build XenForo install archive
+        if: matrix.php == '8.4'
+        run: |
+          rm -rf build releases
+          mkdir -p build releases
+          cp -a upload build/upload
+          rm -rf build/upload/src/addons/WarextStudios/UserContentManager/_output
+          rm -rf build/upload/src/addons/WarextStudios/UserContentManager/_releases
+          rm -rf build/upload/src/addons/WarextStudios/UserContentManager/_build
+          rm -rf build/upload/src/addons/WarextStudios/UserContentManager/_repo
+
+          python3 - <<'PY'
+          import hashlib
+          import json
+          import pathlib
+
+          upload_root = pathlib.Path('build/upload')
+          addon_root = upload_root / 'src/addons/WarextStudios/UserContentManager'
+          hashes = {}
+
+          for path in sorted(addon_root.rglob('*')):
+              if not path.is_file() or path.name == 'hashes.json':
+                  continue
+              rel = path.relative_to(upload_root).as_posix()
+              hashes[rel] = hashlib.sha256(path.read_bytes()).hexdigest()
+
+          (addon_root / 'hashes.json').write_text(
+              json.dumps(hashes, ensure_ascii=False, indent=4) + '\n',
+              encoding='utf-8'
+          )
+          PY
+
+          (
+            cd build
+            zip -qr ../releases/WarextStudios-UserContentManager-1.0.0.zip upload
+          )
+
+          unzip -l releases/WarextStudios-UserContentManager-1.0.0.zip
+          unzip -Z1 releases/WarextStudios-UserContentManager-1.0.0.zip | grep -qx 'upload/src/addons/WarextStudios/UserContentManager/addon.json'
+          unzip -Z1 releases/WarextStudios-UserContentManager-1.0.0.zip | grep -qx 'upload/src/addons/WarextStudios/UserContentManager/hashes.json'
+          if unzip -Z1 releases/WarextStudios-UserContentManager-1.0.0.zip | grep -q '/_output/'; then
+            echo '_output release ZIP içinde olmamalı.'
+            exit 1
+          fi
+
+      - uses: actions/upload-artifact@v4
+        if: matrix.php == '8.4'
+        with:
+          name: WarextStudios-UserContentManager-1.0.0
+          path: releases/WarextStudios-UserContentManager-1.0.0.zip
+          if-no-files-found: error
+
+      - name: Commit install ZIP to repository
+        if: matrix.php == '8.4' && github.event_name == 'push' && github.ref == 'refs/heads/main'
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -f releases/WarextStudios-UserContentManager-1.0.0.zip
+          if git diff --cached --quiet; then
+            exit 0
+          fi
+          git commit -m 'v1.0.0'
+          git push

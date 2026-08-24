@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<phrases>
+  <phrase title="permission.warextUcm_view" version_id="1000030" version_string="0.3.0">Kullanıcı içerik yönetim sayfasını görüntüleyebilir</phrase>
+  <phrase title="permission.warextUcm_bulk" version_id="1000070" version_string="0.7.0">Toplu içerik işlemleri yapabilir</phrase>
+  <phrase title="permission.warextUcm_hardDelete" version_id="1000070" version_string="0.7.0">İçerikleri kalıcı olarak silebilir</phrase>
+  <phrase title="warext_ucm_manage_content" version_id="1000030" version_string="0.3.0">İçerikleri Yönet</phrase>
+  <phrase title="warext_ucm_page_title_x" version_id="1000030" version_string="0.3.0">{username} | İçerik Yönetimi</phrase>
+  <phrase title="warext_ucm_summary" version_id="1000030" version_string="0.3.0">İçerik Özeti</phrase>
+  <phrase title="warext_ucm_threads" version_id="1000030" version_string="0.3.0">Konular</phrase>
+  <phrase title="warext_ucm_total_threads" version_id="1000030" version_string="0.3.0">Toplam konu</phrase>
+  <phrase title="warext_ucm_visible_threads" version_id="1000030" version_string="0.3.0">Görünür</phrase>
+  <phrase title="warext_ucm_deleted_threads" version_id="1000030" version_string="0.3.0">Silinmiş</phrase>
+  <phrase title="warext_ucm_moderated_threads" version_id="1000030" version_string="0.3.0">Onay bekleyen</phrase>
+  <phrase title="warext_ucm_locked_threads" version_id="1000030" version_string="0.3.0">Kilitli</phrase>
+  <phrase title="warext_ucm_thread_state_deleted" version_id="1000030" version_string="0.3.0">Silinmiş</phrase>
+  <phrase title="warext_ucm_thread_state_moderated" version_id="1000030" version_string="0.3.0">Onay bekliyor</phrase>
+  <phrase title="warext_ucm_thread_state_locked" version_id="1000030" version_string="0.3.0">Kilitli</phrase>
+  <phrase title="warext_ucm_no_threads" version_id="1000030" version_string="0.3.0">Bu kullanıcıya ait görüntülenebilir konu bulunamadı.</phrase>
+  <phrase title="warext_ucm_thread_handler_unavailable" version_id="1000030" version_string="0.3.0">Konu içerik işleyicisi kullanılamıyor.</phrase>
+  <phrase title="warext_ucm_filters" version_id="1000040" version_string="0.4.0">Filtreler</phrase>
+  <phrase title="warext_ucm_category" version_id="1000040" version_string="0.4.0">Kategori</phrase>
+  <phrase title="warext_ucm_forum_subcategory" version_id="1000040" version_string="0.4.0">Forum / alt kategori</phrase>
+  <phrase title="warext_ucm_all" version_id="1000040" version_string="0.4.0">Tümü</phrase>
+  <phrase title="warext_ucm_state" version_id="1000040" version_string="0.4.0">İçerik durumu</phrase>
+  <phrase title="warext_ucm_lock_state" version_id="1000040" version_string="0.4.0">Kilit durumu</phrase>
+  <phrase title="warext_ucm_open_threads" version_id="1000040" version_string="0.4.0">Açık</phrase>
+  <phrase title="warext_ucm_prefix" version_id="1000040" version_string="0.4.0">Önek</phrase>
+  <phrase title="warext_ucm_no_prefix" version_id="1000040" version_string="0.4.0">Öneksiz</phrase>
+  <phrase title="warext_ucm_title_contains" version_id="1000040" version_string="0.4.0">Başlıkta geçen ifade</phrase>
+  <phrase title="warext_ucm_date_from" version_id="1000040" version_string="0.4.0">Başlangıç tarihi</phrase>
+  <phrase title="warext_ucm_date_to" version_id="1000040" version_string="0.4.0">Bitiş tarihi</phrase>
+  <phrase title="warext_ucm_min_replies" version_id="1000040" version_string="0.4.0">Minimum cevap</phrase>
+  <phrase title="warext_ucm_max_replies" version_id="1000040" version_string="0.4.0">Maksimum cevap</phrase>
+  <phrase title="warext_ucm_min_views" version_id="1000040" version_string="0.4.0">Minimum görüntülenme</phrase>
+  <phrase title="warext_ucm_max_views" version_id="1000040" version_string="0.4.0">Maksimum görüntülenme</phrase>
+  <phrase title="warext_ucm_sort" version_id="1000040" version_string="0.4.0">Sıralama</phrase>
+  <phrase title="warext_ucm_sort_last_post" version_id="1000040" version_string="0.4.0">Son mesaj tarihi</phrase>
+  <phrase title="warext_ucm_sort_created" version_id="1000040" version_string="0.4.0">Oluşturulma tarihi</phrase>
+  <phrase title="warext_ucm_sort_title" version_id="1000040" version_string="0.4.0">Başlık</phrase>
+  <phrase title="warext_ucm_sort_replies" version_id="1000040" version_string="0.4.0">Cevap sayısı</phrase>
+  <phrase title="warext_ucm_sort_views" version_id="1000040" version_string="0.4.0">Görüntülenme sayısı</phrase>
+  <phrase title="warext_ucm_direction" version_id="1000040" version_string="0.4.0">Sıralama yönü</phrase>
+  <phrase title="warext_ucm_descending" version_id="1000040" version_string="0.4.0">Azalan</phrase>
+  <phrase title="warext_ucm_ascending" version_id="1000040" version_string="0.4.0">Artan</phrase>
+  <phrase title="warext_ucm_apply_filters" version_id="1000040" version_string="0.4.0">Filtreleri Uygula</phrase>
+  <phrase title="warext_ucm_clear_filters" version_id="1000040" version_string="0.4.0">Filtreleri temizle</phrase>
+  <phrase title="warext_ucm_threads_filtered_x" version_id="1000040" version_string="0.4.0">Konular ({count})</phrase>
+  <phrase title="warext_ucm_unknown_category" version_id="1000040" version_string="0.4.0">Kategori bulunamadı</phrase>
+  <phrase title="warext_ucm_bulk_operations" version_id="1000070" version_string="0.7.0">Toplu İşlemler</phrase>
+  <phrase title="warext_ucm_selection_scope" version_id="1000070" version_string="0.7.0">İşlem kapsamı</phrase>
+  <phrase title="warext_ucm_scope_selected" version_id="1000070" version_string="0.7.0">İşaretlediğim konular</phrase>
+  <phrase title="warext_ucm_scope_page" version_id="1000070" version_string="0.7.0">Bu sayfadaki tüm konular</phrase>
+  <phrase title="warext_ucm_scope_category" version_id="1000070" version_string="0.7.0">Seçili kategori / forumdaki tüm konular</phrase>
+  <phrase title="warext_ucm_scope_filter" version_id="1000070" version_string="0.7.0">Mevcut filtre sonucundaki tüm konular</phrase>
+  <phrase title="warext_ucm_bulk_action" version_id="1000070" version_string="0.7.0">Yapılacak işlem</phrase>
+  <phrase title="warext_ucm_choose_action" version_id="1000070" version_string="0.7.0">İşlem seçin</phrase>
+  <phrase title="warext_ucm_action_move" version_id="1000070" version_string="0.7.0">Kategori / forum değiştir</phrase>
+  <phrase title="warext_ucm_action_soft_delete" version_id="1000070" version_string="0.7.0">Sil</phrase>
+  <phrase title="warext_ucm_action_hard_delete" version_id="1000070" version_string="0.7.0">Kalıcı sil</phrase>
+  <phrase title="warext_ucm_action_restore" version_id="1000070" version_string="0.7.0">Geri getir</phrase>
+  <phrase title="warext_ucm_action_lock" version_id="1000070" version_string="0.7.0">Kilitle</phrase>
+  <phrase title="warext_ucm_action_unlock" version_id="1000070" version_string="0.7.0">Kilidi aç</phrase>
+  <phrase title="warext_ucm_action_stick" version_id="1000070" version_string="0.7.0">Sabitle</phrase>
+  <phrase title="warext_ucm_action_unstick" version_id="1000070" version_string="0.7.0">Sabitlemeyi kaldır</phrase>
+  <phrase title="warext_ucm_action_approve" version_id="1000070" version_string="0.7.0">Onayla</phrase>
+  <phrase title="warext_ucm_action_unapprove" version_id="1000070" version_string="0.7.0">Onayı kaldır</phrase>
+  <phrase title="warext_ucm_action_prefix" version_id="1000070" version_string="0.7.0">Önek değiştir</phrase>
+  <phrase title="warext_ucm_action_title_prepend" version_id="1000070" version_string="0.7.0">Başlığın başına metin ekle</phrase>
+  <phrase title="warext_ucm_action_title_append" version_id="1000070" version_string="0.7.0">Başlığın sonuna metin ekle</phrase>
+  <phrase title="warext_ucm_action_title_replace" version_id="1000070" version_string="0.7.0">Başlıkta metin değiştir</phrase>
+  <phrase title="warext_ucm_target_forum" version_id="1000070" version_string="0.7.0">Hedef forum</phrase>
+  <phrase title="warext_ucm_choose_forum" version_id="1000070" version_string="0.7.0">Forum seçin</phrase>
+  <phrase title="warext_ucm_target_prefix" version_id="1000070" version_string="0.7.0">Yeni önek</phrase>
+  <phrase title="warext_ucm_remove_prefix" version_id="1000070" version_string="0.7.0">Öneki kaldır</phrase>
+  <phrase title="warext_ucm_reason" version_id="1000070" version_string="0.7.0">İşlem nedeni</phrase>
+  <phrase title="warext_ucm_title_value" version_id="1000070" version_string="0.7.0">Başlığa eklenecek metin</phrase>
+  <phrase title="warext_ucm_title_search" version_id="1000070" version_string="0.7.0">Başlıkta aranacak metin</phrase>
+  <phrase title="warext_ucm_title_replace" version_id="1000070" version_string="0.7.0">Yerine yazılacak metin</phrase>
+  <phrase title="warext_ucm_hard_delete_confirmation" version_id="1000070" version_string="0.7.0">Kalıcı silme güvenliği</phrase>
+  <phrase title="warext_ucm_hard_delete_confirm_text" version_id="1000070" version_string="0.7.0">Kalıcı silmenin geri alınamayacağını kabul ediyorum</phrase>
+  <phrase title="warext_ucm_apply_bulk" version_id="1000070" version_string="0.7.0">Toplu İşlemi Uygula</phrase>
+  <phrase title="warext_ucm_invalid_bulk_action" version_id="1000070" version_string="0.7.0">Geçersiz toplu işlem seçildi.</phrase>
+  <phrase title="warext_ucm_invalid_selection_scope" version_id="1000070" version_string="0.7.0">Geçersiz seçim kapsamı.</phrase>
+  <phrase title="warext_ucm_category_selection_requires_filter" version_id="1000070" version_string="0.7.0">Kategori kapsamını kullanmak için önce kategori veya forum filtresi seçmelisiniz.</phrase>
+  <phrase title="warext_ucm_select_at_least_one" version_id="1000070" version_string="0.7.0">En az bir konu seçmelisiniz.</phrase>
+  <phrase title="warext_ucm_immediate_limit_x" version_id="1000070" version_string="0.7.0">Tek istekte en fazla {limit} konu işlenebilir. Daha büyük işlemler iş kuyruğuna aktarılacaktır.</phrase>
+  <phrase title="warext_ucm_no_bulk_matches" version_id="1000070" version_string="0.7.0">İşleme uygun konu bulunamadı.</phrase>
+  <phrase title="warext_ucm_target_forum_required" version_id="1000070" version_string="0.7.0">Taşıma işlemi için erişebildiğiniz bir hedef forum seçmelisiniz.</phrase>
+  <phrase title="warext_ucm_hard_delete_confirmation_required" version_id="1000070" version_string="0.7.0">Kalıcı silme işlemini açıkça onaylamalısınız.</phrase>
+  <phrase title="warext_ucm_bulk_result_x" version_id="1000070" version_string="0.7.0">Toplu işlem tamamlandı: {processed} işlendi, {skipped} yetki veya durum nedeniyle atlandı, {failed} hata oluştu.</phrase>
+</phrases>

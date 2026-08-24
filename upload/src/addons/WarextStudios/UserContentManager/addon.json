@@ -1,0 +1,16 @@
+{
+    "title": "Warext Studios | Kullanıcı İçerik Yöneticisi",
+    "description": "XenForo kullanıcı içeriklerini içerik türü ve kategori bazında yönetmek için geliştirilmiş kapsamlı moderasyon ve toplu işlem sistemi.",
+    "version_id": 1001000,
+    "version_string": "1.0.0",
+    "dev": "Warext Studios",
+    "dev_url": "",
+    "faq_url": "",
+    "support_url": "",
+    "extra_urls": [],
+    "require": {
+        "XF": [2030000, "XenForo 2.3.0+"],
+        "php": ["8.1.0", "PHP 8.1.0+"]
+    },
+    "icon": "fa-tasks"
+}

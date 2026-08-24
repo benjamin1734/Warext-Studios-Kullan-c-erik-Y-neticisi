@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<routes>
+  <route route_type="public" route_prefix="kullanici-icerikleri" format=":int&lt;user_id,username&gt;/:page" controller="WarextStudios\UserContentManager:UserContentFinal"/>
+  <route route_type="public" route_prefix="kullanici-kaynaklari" format=":int&lt;user_id,username&gt;/:page" controller="WarextStudios\UserContentManager:ResourceContentFinal"/>
+  <route route_type="public" route_prefix="kullanici-icerik-uyari" format=":int&lt;user_id,username&gt;" controller="WarextStudios\UserContentManager:UserWarning"/>
+  <route route_type="public" route_prefix="kullanici-icerik-gecmisi" format=":int&lt;user_id,username&gt;" controller="WarextStudios\UserContentManager:ActionHistory"/>
+</routes>
